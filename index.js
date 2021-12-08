@@ -72,10 +72,18 @@ class PersonItem{
     render(){
  const prodItem = document.createElement('li')
  prodItem.className = 'prod-item'
- console.log(this.person)
+ prodItem.innerHTML = `
+ <h2>${this.person.id}</h2>
+ <h3>${this.person.name}</h3>  
+ <h4>${this.person.email}</h4>
+ <h5>${this.person.username}</h5>
+ <button>Press</button>
+ ` 
+const menu = document.getElementById('menu')
 
-    }
+ menu.insertAdjacentElement('afterbegin',prodItem)
 
+  }
 }
 
 
